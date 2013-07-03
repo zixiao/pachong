@@ -7,7 +7,9 @@ url_2 = urllib.urlopen("http://xiaofeiniu.taobao.com/index.htm?spm=2013.1.w5002-
 content_1 = url_1.read()
 content_2 = url_2.read()
 soup_1 = BeautifulSoup(content_1)
-print soup_1.find_all("dd")
+
+for title in soup_1.find_all("dd"):
+    print title.get_text()
 
 #file_1 = open('xvtaitai', 'w') 
 #file_2 = open('xiaofeiyang', 'w')
